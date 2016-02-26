@@ -1,10 +1,15 @@
-var controllers = angular.module('controllers',['ngFileUpload'])
+var controllers = angular.module('controllers',[])
 // Login Controller -- This handles the login page that the user can enter
 // enter his username & password.
 controllers.controller('loginController', function($scope, $state,$location, LoginService){
-    $scope.email = "thilina.ratnayake1@gmail.com";
+    $scope.email = "test@test.com";
     $scope.password = "testPassword"
     $scope.loginFailure = false;
+
+    $scope.$watch("email", function(newValue, oldValue) {
+        console.log("EMAIL CHANGED!");
+        console.log(newValue);
+    });
 
 
     //Functions that should be run later
@@ -28,14 +33,11 @@ controllers.controller('loginController', function($scope, $state,$location, Log
     }
 })
 
-
-controllers.controller('homeController', ['$scope', function($scope){
+controllers.controller("testController", ['$scope', function($scope){
     console.log("AYY");
-}]).directive('topnav', function() {
-    return {
-        templateUrl: 'views/partials/navigation.html'
-    }
-});
+}])
+
+
 
 
 

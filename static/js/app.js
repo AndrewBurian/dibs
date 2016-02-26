@@ -1,15 +1,29 @@
 
-angular
+var mainApp = angular
   .module('dibsApp', [
-    'ui.router'
-  ])
-  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
+    'ui.router','controllers','services'
+  ]);
+
+
+
+  mainApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
         templateUrl: 'views/home.html',
-        controller: 'homeController',
+        authenticate: false
+      })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'views/login.html',
+        controller: 'loginController',
+        authenticate: false
+      })
+      .state('test', {
+        url: '/test',
+        templateURl: 'views/test.html',
+        controller: 'testController',
         authenticate: false
       })
     $urlRouterProvider.otherwise('/');

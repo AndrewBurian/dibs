@@ -1,8 +1,7 @@
 
 angular
-  .module('app', [
-    'ui.router',
-    'lbServices'
+  .module('dibsApp', [
+    'ui.router'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
@@ -13,7 +12,7 @@ angular
         controller: 'homeController',
         authenticate: false
       })
-    $urlRouterProvider.otherwise('all-reviews');
+    $urlRouterProvider.otherwise('/');
   }])
   .run(['$rootScope', '$state', function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(event, next) {

@@ -29,6 +29,14 @@ controllers.controller('loginController', function($scope, $state,$location, Log
 })
 
 
+controllers.controller('homeController', ['$scope', function($scope){
+    console.log("AYY");
+}]).directive('topnav', function() {
+    return {
+        templateUrl: 'views/partials/navigation.html'
+    }
+});
+
 
 
 //Directives & Associated Controllers

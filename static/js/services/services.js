@@ -14,19 +14,19 @@ services.factory('LoginService', ['$http', function($http) {
 
 }]);
 
-//Used to get the users permissions.
-user.factory('User', function userFactory(){
+// //Used to get the users permissions.
+// user.factory('User', function userFactory(){
     
-    var User = new Object();
-    //Check if a user is logged by checking if a Key exists in session storage.
-    if(sessionStorage.token){
-        User.loggedIn = true;
-        console.log("User's value changed!")
-    }
+//     var User = new Object();
+//     //Check if a user is logged by checking if a Key exists in session storage.
+//     if(sessionStorage.token){
+//         User.loggedIn = true;
+//         console.log("User's value changed!")
+//     }
 
 
-    return User;
-})
+//     return User;
+// })
 
 //Used to get the users info. Makes a call to the memberInfo API and returns the person's information.
 //Then it also sets it in the $rootScope so that it can be used from elsewhere.

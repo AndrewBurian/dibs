@@ -8,7 +8,7 @@ services.factory('LoginService', ['$http', function($http) {
         return $http.post('/authenticate', data);
         //Add into rootscope here
         console.log("ADD INTO THE ROOT SCOPE HERE!");
-        console.log(data):
+        console.log(data);
        }
     }       
 

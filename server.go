@@ -4,18 +4,24 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
+	"./api"
 )
 
 func main() {
-	fmt.Println("Hello, DIBS!")
+
+	listenAddr := ":9000"
 
 	// setup static content handler
 	http.Handle("/", http.FileServer(http.Dir("static/")))
 
+	authHandler := api.NewAuth()
+	http.Handle("/auth", authHandler)
+
 	// run the server
-	err := http.ListenAndServe(":9000", nil)
+	log.Println("Starting server on " + listenAddr)
+	err := http.ListenAndServe(listenAddr, nil)
 	if err != nil {
 		panic(err)
 	}

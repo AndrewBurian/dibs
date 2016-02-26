@@ -1,0 +1,62 @@
+<div class="adminstrationImportPage" ng-controller="administrationImportController">
+    <!-- TOP NAVIGATION BAR -->
+    <topnav></topnav>
+    <!-- SIDEBAR -->
+    <sidebar></sidebar>
+    <div class="page-wrapper">
+        <h1>Import Cadets</h1>
+        <hr>
+        
+        <!-- Start Panel Row -->
+        <div class="row" ng-show="fileUpload"> 
+            <h4>Upload on file select</h4>
+              <button type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+                      accept="xls/*" ngf-max-height="1000" ngf-max-size="1MB">
+                  Select File</button>
+              <br><br>
+              File:
+              <div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+                  <span class="progress" ng-show="f.progress >= 0">
+                      <div style="width:{{f.progress}}%"  
+                           ng-bind="f.progress + '%'"></div>
+                  </span>
+              </div>     
+              {{errorMsg}}
+        </div>
+        <!-- End Panel Row -->
+        <div class="row" ng-show="reviewCadets"> 
+            <table class="table table-bordered">
+            <h4>Review cadets to be imported</h4>
+                <thead>
+                  <tr>
+                    <th ng-click="sortType = 'CIN'; sortReverse = !sortReverse">CIN</th>
+                    <th ng-click="sortType = 'Rank'; sortReverse = !sortReverse">Rank </th>
+                    <th ng-click="sortType = 'Last_Name'; sortReverse = !sortReverse">Last Name</th>
+                    <th ng-click="sortType = 'First_Name'; sortReverse = !sortReverse">First Name</th>
+                    <th ng-click="sortType = 'Organizational_Group'; sortReverse = !sortReverse">Organizational Group</th>
+                    <th ng-click="sortType = 'Training_Group'; sortReverse = !sortReverse">Training Group</th>
+                  </tr>
+                </thead>
+                <tbody ng-repeat="cadet in cadets | orderBy:sortType:sortReverse">
+                  <tr>
+                    <td>{{cadet.CIN}}</td>
+                    <td>{{cadet.Rank}}</td>
+                    <td>{{cadet["First Name"]}}</td>
+                    <td>{{cadet["Last Name"]}}</td>
+                    <td>{{cadet["Organizational Group"]}}</td>
+                    <td>{{cadet["Training Group"]}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button ng-click="sendCadets()"> Yes this looks good! Submit it!</button>
+        </div>
+
+        <!-- Note: set the initial collapsed state and change it when clicking -->
+        
+
+
+
+
+    </div>
+
+</div>

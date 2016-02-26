@@ -1,0 +1,76 @@
+
+<div class="registerPage" ng-controller="registerController">
+        <div class="registerContainer container">
+          <!-- <div class="col-xs-12 col-sm-6 loginImage">
+            <img src="img/icons/svg/clipboard.svg" alt="Book"> <h2>Clipboard</h2>
+            <p>Making Squadron Management, Easy</p>
+          </div> -->
+          <div class="col-xs-12 col-sm-12 login-form">
+
+          <div class="decoration">
+            <div class="alert alert-danger" role="alert" ng-show="loginFailure">Incorrect username or password. Please try again</div>
+
+            <img src="img/icons/svg/clipboard.svg" alt="Book"> <h2>Register for Clipboard</h2>
+            <p>Making Squadron Management, Easy</p>
+          </div>
+          
+          <form ng-show="showForm">
+            <div class="row type-rank">
+              <!-- Type -->
+              <div class="col-xs-6">
+                <h4 class="demo-panel-title">Type</h4>
+                  <label class="radio">
+                  <input type="radio" ng-model = "user.type" name="optionsRadios" value="Officer" data-toggle="radio" checked="" class="custom-radio" value="Officer"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                  Adult Staff
+                  </label>
+                  <label class="radio">
+                  <input type="radio" ng-model = "user.type" name="optionsRadios" value="Cadet" data-toggle="radio" checked="" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                  Cadet
+                  </label>
+            </div>
+
+              <!-- Rank -->
+              <div class="col-xs-6">
+                <h4 class="demo-panel-title">Rank</h4>
+                <select ng-model="selectedRank" ng-options="rank.id as rank.name for rank in Ranks | filter: {type: user.type} " class="form-control select select-primary" data-toggle="select">
+                  <option value="">Select Account</option>
+                </select>
+                <p ng-model="user.type"></p>
+              </div> <!-- /.col-xs-6 -->
+          </div>
+
+            <!-- First Name -->
+            <div class="form-group">
+              <input ng-model="firstName" type="text" class="form-control login-field" value="" placeholder="First Name" />
+              <label class="login-field-icon fui-user" for="login-email"></label>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group">
+              <input ng-model="lastName" type="text" class="form-control login-field" value="" placeholder="Last Name" />
+              <label class="login-field-icon fui-user" for="login-email"></label>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <input ng-model="emailAddress" type="text" class="form-control login-field" value="" placeholder="Email Address" />
+              <label class="login-field-icon fui-mail" for="login-email"></label>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+              <input ng-model="password" type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+            <!-- RealWorldID -->
+            
+          <a id="btn-login" ng-click ="register()" class="btn btn-primary btn-lg btn-block">Register</a>
+        </form>
+
+        <div class="registrationSuccess" ng-show="showRegistrationSuccess">
+          <h2>Congratulations!</h2>
+          <img src="img/icons/svg/retina.svg" alt="Retina">
+          <p>You have successfully registered for Clipboard. Please check your email for a verification link that should arrive shortly.</p>
+        </div>
+	</div>
+</div>

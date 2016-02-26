@@ -1,0 +1,26 @@
+
+<div class="loginPage" ng-controller="loginController">
+        <div class="loginContainer container" >
+          <div class="col-xs-12 col-sm-6 loginImage">
+            <img src="img/icons/svg/clipboard.svg" alt="Book"> <h2>Dibs</h2>
+            <p>Making Family Resource Management, Easy</p>
+          </div>
+          <form class="col-xs-12 col-sm-6 login-form">
+          <div class="alert alert-danger" role="alert" ng-show="loginFailure">Incorrect username or password. Please try again</div>
+            <div class="form-group">
+              <input ng-model="email" type="text" class="form-control login-field" value="" placeholder="Enter your E-Mail" id="login-email" />
+              <label class="login-field-icon fui-user" for="login-email"></label>
+            </div>
+
+            <div class="form-group">
+
+              <input ng-model="password" type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+          </div>
+          <a id="btn-login" ng-click ="login()" class="btn btn-primary btn-lg btn-block">Log in</a>
+            <a href="/#/forgotPassword" class="login-link">Forgot your password?</a>
+            <a href="/#/register" class="login-link">Need an account?</a>
+
+        </form>
+	</div>
+</div>

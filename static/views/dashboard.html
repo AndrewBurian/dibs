@@ -1,0 +1,94 @@
+<div class="dashboardPage" ng-controller="dashboardController">
+    <!-- TOP NAVIGATION BAR -->
+    <topnav></topnav>
+    <!-- SIDEBAR -->
+    <sidebar></sidebar>
+    <div class="page-wrapper">
+        <h1>Dashboard</h1>
+        <p>Welcome {{ userInfo.Rank.name }} {{userInfo.lastName}} to {{Page.title}}</p>
+        <hr>
+        
+        <!-- Start Panel Row -->
+        <div class="row"> 
+            <!-- <div id="topAlert" class="alert alert-info" role="alert"></div>
+            <div id="downloadReady" class="alert alert-info alert dismissible" role="alert">Your attendance session is now complete. If you would like to download your attendance results, please head to <a href="/manageAttendance"></a></div> -->
+            
+             <div class="col-lg-4 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-child fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div id="unitStrength" class="huge">0</div>
+                               
+                                <div>Cadets in unit</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-calendar fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div id="upcomingAttendance" class="huge">0</div>
+                                <div>Attendance sessions scheduled</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-indent fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">3</div>
+                                <div>Notices of absence/excuses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Details</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Panel Row -->
+
+        <!-- Note: set the initial collapsed state and change it when clicking -->
+        
+
+
+
+
+    </div>
+
+</div>

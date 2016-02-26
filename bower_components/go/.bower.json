@@ -1,0 +1,40 @@
+{
+  "name": "go",
+  "description": "A procedural automation workflow framework",
+  "main": "dist/go.min.js",
+  "authors": [
+    "Alex Boyce <curiosity26@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "automation",
+    "procedural",
+    "batch",
+    "workflow",
+    "go.js"
+  ],
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "homepage": "https://github.com/curiosity26/Go",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.1.0",
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "b1d4c625eb80284b6abc53d64e6ea791d9d1e798"
+  },
+  "_source": "git://github.com/curiosity26/go.git",
+  "_target": "^0.1.0",
+  "_originalSource": "go",
+  "_direct": true
+}

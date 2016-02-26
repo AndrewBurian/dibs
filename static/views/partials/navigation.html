@@ -1,0 +1,15 @@
+  	<nav ng-controller="topNavController" class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" ui-sref="#">Clipboard</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav navbar-right" ng-repeat="nav in navigation">
+                <li><a href="/#/{{nav.link}}">{{nav.name}}</a></li>
+
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>

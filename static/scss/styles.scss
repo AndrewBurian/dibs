@@ -1,0 +1,207 @@
+
+//GLOBAL STYLES
+$footer: 80px;
+html, body{
+  height: 100vh;
+}
+.page-wrap {
+  min-height: 100vh;
+  /* equal to footer height */
+  margin-bottom: -$footer; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  height: $footer; 
+}
+
+.site-footer{
+  height: $footer;
+  background-color: #2f4154;
+  color: white;
+}
+
+@media(min-width:768px) {
+  .sidebar {
+      z-index: 1;
+      position: absolute;
+      width: 250px;
+      margin-top: -30px;
+
+
+    .sidebar-nav.navbar-collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+     .sidebar-search {
+        padding: 15px;
+    }
+
+     ul li {
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+     ul li a.active {
+        background-color: #eee;
+    }
+
+     .arrow {
+        float: right;
+    }
+
+     .fa.arrow:before {
+        content: "\f104";
+    }
+
+     .active>a>.fa.arrow:before {
+        content: "\f107";
+    }
+
+     .nav-second-level li,
+     .nav-third-level li {
+        border-bottom: 0!important;
+    }
+
+     .nav-second-level li a {
+        padding-left: 37px;
+    }
+
+     .nav-third-level li a {
+        padding-left: 52px;
+    }
+
+    .sidebarNavs{
+      padding: 10px 15px;
+    }
+
+    .deptLabel{
+      padding-left: 10px;
+      padding-top: 20px;
+      text-decoration: bold;
+      text-decoration: underline;
+    }
+  } //End sidebar
+}
+
+@media(min-width:768px) {
+    .page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+
+//=========================HOME PAGE
+.homePage {
+  //height: 100vh;
+ .topContainer {
+  text-align: center;
+ }
+ .level2 {
+  background-color: #2980B9;
+  color: white;
+  text-align: center;
+  padding: 2.5%; 
+  }
+}
+
+
+
+
+
+//=========================LOGIN PAGE
+  .loginPage {
+  height: 100vh;
+  background-color: #2980B9; }
+
+  .loginPage .loginImage {
+    text-align: center;
+    color: white; }
+  .loginPage .loginContainer {
+    padding-top: 10%; }
+  .loginPage .btn-primary {
+    background-color: #3498db; }
+
+//=========================Register PAGE
+  .registerPage {
+    height: 100vh;
+    background-color: #2980B9; 
+    
+    .decoration{
+      text-align: center;
+    }
+
+    .type-rank{
+      text-align: center;
+
+      .icons{
+        margin-left: 10px;
+      }
+
+    }   
+    .registrationSuccess{
+      text-align: center;
+    }
+    .registerImage {
+    text-align: center;
+    color: white; }
+    .registerContainer {
+    padding-top: 10%; }
+    .btn-primary {
+    background-color: #3498db; }
+  }
+
+
+//=========================OUTER PAGEs (the ones with blue backgrounds)
+ .outerPage {
+    height: 100vh;
+    background-color: #2980B9; 
+
+    .outerPageContainer{
+      padding-top: 10%;
+    }
+    
+    .decoration{
+      text-align: center;
+    }
+
+    .type-rank{
+      text-align: center;
+
+      .icons{
+        margin-left: 10px;
+      }
+
+    }   
+
+    .outerPageImage {
+    text-align: center;
+    color: white; }
+    .registerContainer {
+    padding-top: 20%; }
+    .btn-primary {
+    background-color: #3498db; }
+  }
+
+
+//=========================DASHBOARD PAGE
+.dashboardPage{
+  .panel {
+ 
+   }
+   .panel-green{
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .panel-yellow{
+      background-color: #f1c40f;
+      color: white;
+    }
+}
